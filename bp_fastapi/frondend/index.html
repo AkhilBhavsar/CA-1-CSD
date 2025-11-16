@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>BP Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Blood Pressure Calculator</h1>
+
+    <section class="card">
+      <form id="bpForm">
+        <div class="row">
+          <label for="systolic">Systolic (mm Hg)</label>
+          <input id="systolic" name="systolic" type="number" min="70" max="190" required>
+        </div>
+        <div class="row">
+          <label for="diastolic">Diastolic (mm Hg)</label>
+          <input id="diastolic" name="diastolic" type="number" min="40" max="100" required>
+        </div>
+        <div class="row">
+          <button type="submit">Calculate & Save</button>
+        </div>
+      </form>
+
+      <div id="result" class="result hidden">
+        <h2>Result</h2>
+        <p id="reading"></p>
+        <p id="category" class="category"></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Recent readings</h2>
+      <div id="history"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
